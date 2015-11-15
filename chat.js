@@ -29,7 +29,7 @@ io.on('connection', function (socket) {
 	console.log();
 	logger.info('SocketIO > Connected socket ' + socket.id);
 	//console.log(io.sockets.connected);
-	socket.emit('myid',socket.id);
+	socket.emit('myid','herokuapp -- '+socket.id);
 	
 	
 	
