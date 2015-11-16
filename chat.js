@@ -31,7 +31,9 @@ io.on('connection', function (socket) {
 	//console.log(io.sockets.connected);
 	io.emit('myid','herokuapp -- '+socket.id+' ');
 	
-	
+	socket.on('a',function(data){
+		io.emit('b','heroku->'+data);	
+	});
 	
 	socket.on('disconnect',function(){
 		console.log(socket.id + ' CIKTI! ');
